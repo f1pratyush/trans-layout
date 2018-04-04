@@ -1,4 +1,4 @@
-.section {
+section {
   position: absolute;
   z-index: 0;
   width: 50%;
@@ -15,26 +15,18 @@
           transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
 }
 .section:first-child {
-  top: 0;
-  left: 0;
   background-image:url('https://images.pexels.com/photos/976917/pexels-photo-976917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;
 }
 .section:nth-child(2) {
-  top: 0;
-  left: 50%;
   background-image:url('https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=350');
   background-size: cover;
 }
 .section:nth-child(3) {
-  top: 50%;
-  left: 0;
   background-image:url('https://images.pexels.com/photos/68147/waterfall-thac-dray-nur-buon-me-thuot-daklak-68147.jpeg?auto=compress&cs=tinysrgb&h=350');
   background-size: cover;
 }
 .section:nth-child(4) {
-  top: 50%;
-  left: 50%;
   background-image:url('https://images.pexels.com/photos/976919/pexels-photo-976919.jpeg?auto=compress&cs=tinysrgb&h=350');
   background-size: cover;
 }
@@ -45,6 +37,11 @@
   width: 100%;
   height: 100%;
 }
+
+.section.is-expanded > .demo-box > p{
+  display: block;
+}
+
 .has-expanded-item .section:not(.is-expanded) {
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -107,4 +104,8 @@ body {
 
 .content {
   visibility: hidden;
+}
+
+.demo-box > p{
+  display: none;
 }
